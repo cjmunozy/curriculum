@@ -2,7 +2,6 @@
 
 * {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #7f5af0;
 }
 
 .title {
@@ -11,16 +10,49 @@
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e0a642;
+    text-align: center;
+}
+
+#tabla {
+    font-family: "Hind Madurai";
 }
 
 .lista {
     font-family: "Lora", serif;
 }
 
-#seccion {
-    background-color: #16161a;
+span {
+    font-family: "Lora", serif;
 }
 
-#tabla {
-    background-color: #72757e;
+body {
+    background-color: #292929;
+}
+
+#seccion {
+    background-color: #ffdcad;
+    color: #6d2c2c;
+}
+
+.formulario {
+    margin: 15px 0px;
+    padding: 0.5%;
+}
+
+.imagen, .video {
+    margin: 2px 1px 1.5px;
+    margin-top: 0.8rem;
+    border: 0.2pt dashed #827d7d;
+    padding: 2% 11%;
+    box-shadow: 
+   rgba(179, 92, 30, 0.25) 0px 54px 55px, 
+   rgba(179, 92, 30, 0.12) 0px -12px 30px, 
+   rgba(179, 92, 30, 0.12) 0px 4px 6px,
+   rgba(179, 92, 30, 0.17) 0px 12px 13px, 
+   rgba(179, 92, 30, 0.09) 0px -3px 5px;
+}
+
+.video {
+    padding: 2% 25%;
 }
