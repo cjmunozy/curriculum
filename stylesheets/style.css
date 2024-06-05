@@ -14,8 +14,57 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 #tabla {
     font-family: "Hind Madurai";
+    padding: 0% 20%;
+}
+
+#animacion {
+    padding: 10% 45%;
+}
+
+.loader {
+    width: 40px;
+    height: 30px;
+    --c:no-repeat linear-gradient(#000 0 0);
+    background:
+      var(--c) 0    100%/8px 30px,
+      var(--c) 50%  100%/8px 20px,
+      var(--c) 100% 100%/8px 10px;
+    position: relative;
+    clip-path: inset(-100% 0);
+  }
+
+  .loader:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    left: -16px;
+    top: 0;
+    animation: 
+      l5-1 2s   linear infinite,
+      l5-2 0.5s cubic-bezier(0,200,.8,200) infinite;
+  }
+
+  @keyframes l5-1 {
+    0%   {left:-16px;transform:translateY(-8px)}
+    100% {left:calc(100% + 8px);transform:translateY(22px)}
+  }
+
+  @keyframes l5-2 {
+    100% {top:-0.1px}
+  }
+
+p {
+    padding: 0% 12%;
+    text-align: center;
 }
 
 .lista {
@@ -23,7 +72,7 @@ h1 {
 }
 
 span {
-    font-family: "Lora", serif;
+    font-size: large;
 }
 
 body {
@@ -36,14 +85,13 @@ body {
 }
 
 .formulario {
-    margin: 15px 0px;
+    margin: 2% 0px;
     padding: 0.5%;
 }
 
 .imagen, .video {
     margin: 2px 1px 1.5px;
     margin-top: 0.8rem;
-    border: 0.2pt dashed #827d7d;
     padding: 2% 11%;
     box-shadow: 
    rgba(179, 92, 30, 0.25) 0px 54px 55px, 
@@ -53,6 +101,83 @@ body {
    rgba(179, 92, 30, 0.09) 0px -3px 5px;
 }
 
+img {
+    filter: saturate(25%);
+}
+
+img:hover {
+    filter: saturate(80%);
+}
+
+
 .video {
     padding: 2% 25%;
+}
+
+.info {
+    display: flex;
+    margin: 2% 0%;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.info > #seccion {
+    flex-basis: 10%;
+    flex-grow: 1;
+    border-radius: 20px;
+    box-shadow:  20px -20px 60px #3454903b,
+                -20px 20px 60px #3454903b;
+}
+
+.descripcion {
+    display: grid;
+    row-gap: 0.5rem;
+    column-gap: 3rem;
+    padding: 0% 4% 2%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#exp {
+    padding: 2% 0% 0%;
+}
+
+.cargo {
+    text-align: center;
+}
+
+#desc_1 {
+    grid-column: 1/2;
+    grid-row: 1;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#desc_1:hover {
+    transform: scale(1.05)
+}
+
+#desc_2 {
+    grid-column: 2/3;
+    grid-row: 1;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#desc_2:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 1% 1%;
 }
